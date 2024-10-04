@@ -1,114 +1,157 @@
+@charset "UTF-8";
 body {
   font-family: "League Spartan", sans-serif;
   color: #ffffff;
   background-color: #020305;
   margin: 0;
-  padding: 0; 
-}
+  padding: 0; }
 
+/*Estilos section apresentação (apresentacao_section)*/
+.apresentacao_section h1, .apresentacao_section h2 {
+  font-family: "League Spartan", sans-serif;
+  margin-top: 5%;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center; }
 
-/* Depoimentos - CSS */
-.depoimentos {
-    min-height: 100vh;
+.apresentacao_section h1 {
+  font-size: xx-large; }
+
+.container_features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  padding-top: 0; }
+  .container_features .feature {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px; }
+    .container_features .feature i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #269199; }
+    .container_features .feature h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #58AFB8; }
+    .container_features .feature p {
+      font-weight: 200;
+      font-family: "League Spartan", sans-serif; }
+
+/*Estilos section funcionalidades (funcionalidades_section)*/
+.albuns_article {
+  display: flex;
+  max-width: 80%;
+  /**mobile: 100%*/
+  margin: 5% auto; }
+  .albuns_article .albuns_text {
+    height: 100vh;
+    /**mobile: auto*/
+    width: 80%;
+    background-color: #58AFB8;
+    padding: 5%;
+    margin-left: -250px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    line-height: 1.5em;
+    font-size: 45px;
+    /*+1200: 55px, mobile: medium*/
+    color: #020305;
+    font-weight: 900; }
 
-.slide-container {
-    max-width: 1120px;
-    width: 100%;
-    padding: 40px 0;
-}
+.circle-image {
+  width: 50%; }
+  .circle-image img {
+    width: 20vw;
+    border-radius: 9999px;
+    object-fit: cover;
+    position: absolute; }
+    .circle-image img:nth-child(1) {
+      margin-top: -5vw;
+      z-index: 1;
+      border: 5px solid #58AFB8; }
+    .circle-image img:nth-child(2) {
+      z-index: 2;
+      margin-top: 10vw;
+      margin-left: 100px;
+      border: 5px solid #EC225E; }
+    .circle-image img:nth-child(3) {
+      z-index: 3;
+      margin-top: 20vw;
+      margin-left: -10px;
+      border: 5px solid #269199; }
+    .circle-image img:nth-child(4) {
+      margin-top: 30vw;
+      margin-left: 100px;
+      z-index: 4;
+      border: 5px solid #D2D2D2; }
+    .circle-image img:nth-child(5) {
+      margin-top: 40vw;
+      margin-left: -10px;
+      border: 5px solid #58AFB8;
+      z-index: 5; }
+    .circle-image img:nth-child(6) {
+      margin-top: 50vw;
+      margin-left: 100px;
+      z-index: 4;
+      border: 5px solid #EC225E; }
 
-.slide-content {
-   margin: 0 40px;
-} .card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    gap:30px
-}
+.funcionalidades_article {
+  margin: 20% 0;
+  width: 90%;
+  display: flex;
+  align-items: center; }
+  .funcionalidades_article div {
+    width: 60%; }
+    .funcionalidades_article div li {
+      font-size: xx-large;
+      list-style-type: none;
+      padding: 4%;
+      background-color: #EC225E;
+      margin: 5% 0;
+      box-shadow: 0px 10px 0px 5px #269199;
+      border-start-end-radius: 50px;
+      border-end-end-radius: 50px; }
+      .funcionalidades_article div li:nth-child(1) {
+        width: 60%; }
+      .funcionalidades_article div li:nth-child(2) {
+        width: 80%; }
+  .funcionalidades_article figure {
+    width: 40%; }
+    .funcionalidades_article figure img {
+      width: 100%;
+      border-radius: 10px; }
 
-.image-content, .card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
-}
+@media (max-width: 768px) {
+  .apresentacao_section h1 {
+    font-size: medium; }
+  .container_features {
+    grid-template-columns: 1fr; }
+    .container_features .feature h2 {
+      font-size: medium; }
+  .albuns_article {
+    max-width: 100%; }
+    .albuns_article .albuns_text {
+      margin-top: 10vw;
+      width: 60%;
+      height: auto;
+      /**mobile: auto*/
+      font-size: medium;
+      /*+1200: 55px, mobile: medium*/
+      margin-left: -100px;
+      padding-left: 0; }
+  .circle-image {
+    margin-left: -10px; }
+  .funcionalidades_article div li {
+    font-size: small; } }
 
-.image-content {
-    position: relative;
-    row-gap: 5px;
-    padding: 25px 0;
-}
+@media (max-width: 1198px) {
+  .albuns_article .albuns_text {
+    height: auto; } }
 
-.overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #269199;
-    border-radius: 25px 25px 0 25px;
-}   .overlay::before, .overlay::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: -40px;
-        height: 40px;
-        width: 40px;
-        background-color: #269199;
-    } .overlay::after {
-        border-radius: 0 25px 0 0;
-        background-color: #efefee;
-    }
-
-.card {
-    width: 320px;
-    border-radius: 25px;
-    background-color: #efefee;
-}
-    .card-image {
-        position: relative;
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-        background-color: #fff; 
-        padding: 3px;
-    }   
-        .card-image .card-img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid none;
-        }
-
-    .user {
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 5px;
-        color: #020305;
-    } .subtitulo {
-        color: #333;
-        font-weight: 900;
-        margin-bottom: 10px;
-    } .descricao {
-        font-size: 14px;
-        text-align: center;
-        color: #020305;
-    } .btn-perfil {
-        border: none;
-        font-size: 16px;
-        color: #fff;
-        padding: 8px 16px;
-        background-color: #EC225E;
-        border-radius: 6px;
-        margin: 14px;
-        cursor: pointer;
-        transition: all 0.3s ease-out;
-    }  .btn-perfil:hover {
-        background-color: #87082e;
-    }
-    
+@media (min-width: 1400px) {
+  .albuns_article .albuns_text {
+    font-size: 60px;
+    /*+1200: 55px, mobile: medium*/ } }
