@@ -155,3 +155,125 @@ body {
   .albuns_article .albuns_text {
     font-size: 60px;
     /*+1200: 55px, mobile: medium*/ } }
+
+
+    .depoimentos {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .slide-container {
+      max-width: 1120px;
+      width: 100%;
+      padding: 40px 0;
+    }
+    
+    .slide-content {
+      margin: 0 40px;
+    }
+    
+    .card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+      gap: 30px;
+    }
+    
+    .image-content,
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 14px;
+    }
+    
+    .image-content {
+      position: relative;
+      row-gap: 5px;
+      padding: 25px 0;
+    }
+    
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #269199;
+      border-radius: 25px 25px 0 25px;
+    
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+        height: 40px;
+        width: 40px;
+        background-color: #269199;
+      }
+    
+      &::after {
+        border-radius: 0 25px 0 0;
+        background-color: #efefee;
+      }
+    }
+    
+    .card {
+      width: 320px;
+      border-radius: 25px;
+      background-color: #efefee;
+    
+      .card-image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        padding: 3px;
+    
+        .card-img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 4px solid none;
+        }
+      }
+    
+      .user {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #333;
+      }
+    
+      .subtitulo {
+        color: #333;
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+    
+      .descricao {
+        font-size: 14px;
+        text-align: center;
+        color: #333;
+      }
+    
+      .btn-perfil {
+        border: none;
+        font-size: 16px;
+        color: #fff;
+        padding: 8px 16px;
+        background-color: #EC225E;
+        border-radius: 6px;
+        margin: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    
+        &:hover {
+          background-color: #87082e;
+        }
+      }
+    }
