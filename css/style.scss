@@ -1,3 +1,24 @@
-body{
-   
+$rosa-paleta: #EC225E;
+$azul-claro-paleta: #58AFB8;
+$azul-medio-paleta: #269199;
+$cinza-paleta: #D2D2D2;
+$preto-paleta: #020305;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+@mixin font-league-spartan {
+    font-family: "League Spartan", sans-serif;
+}
+
+body {
+    @include font-league-spartan;
+    color: #ffffff;
+    background-color: $preto-paleta;
+    margin: 0;
+    padding: 0;
+}
+
