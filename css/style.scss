@@ -22,3 +22,212 @@ body {
     padding: 0;
 }
 
+
+/*Estilos section apresentação (apresentacao_section)*/
+
+.container_features {
+    @include font-league-spartan;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+
+    .feature {
+        text-align: center;
+        padding: 2rem;
+        border-radius: 10px;
+
+        i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: $azul-medio-paleta
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: $azul-claro-paleta;
+
+        }
+
+        p {
+            font-weight: 200;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+/*Estilos section funcionalidades (funcionalidades_section)*/
+
+.albuns_article {
+    display: flex;
+    max-width: 80%;
+    /**mobile: 100%*/
+    margin: 5% auto;
+
+    .albuns_text {
+        height: 100vh;
+        /**mobile: auto*/
+        width: 80%;
+        background-color: #58AFB8;
+        padding: 5%;
+        margin-left: -250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.5em;
+        font-size: 45px;
+        /*+1200: 55px, mobile: medium*/
+        color: $preto-paleta;
+        font-weight: 900;
+
+    }
+}
+
+.circle-image {
+    width: 50%;
+    $largura-img: 20vw;
+    $margin-negativa: -10px;
+    $margin-positiva: 100px;
+
+    img {
+        width: $largura-img;
+        border-radius: 9999px;
+        object-fit: cover;
+        position: absolute;
+
+        // Estilo para a primeira imagem
+        &:nth-child(1) {
+            margin-top: -5vw;
+            z-index: 1;
+            border: 5px solid $azul-claro-paleta;
+        }
+
+        // Estilo para a segunda imagem
+        &:nth-child(2) {
+            z-index: 2;
+            margin-top: $largura-img - 10;
+            margin-left: $margin-positiva;
+            border: 5px solid $rosa-paleta;
+        }
+
+        // Estilo para a terceira imagem
+        &:nth-child(3) {
+            z-index: 3;
+            margin-top: $largura-img;
+            margin-left: $margin-negativa;
+            border: 5px solid $azul-medio-paleta;
+        }
+
+        // Estilo para a quarta imagem
+        &:nth-child(4) {
+            margin-top: $largura-img + 10;
+            margin-left: $margin-positiva;
+            z-index: 4;
+            border: 5px solid $cinza-paleta;
+        }
+
+        // Estilo para a quinta imagem
+        &:nth-child(5) {
+            margin-top: $largura-img +20;
+            margin-left: $margin-negativa;
+            border: 5px solid $azul-claro-paleta;
+            z-index: 5;
+        }
+
+        // Estilo para a sexta imagem
+        &:nth-child(6) {
+            margin-top: $largura-img + 30;
+            margin-left: $margin-positiva;
+            z-index: 4;
+            border: 5px solid $rosa-paleta;
+        }
+    }
+
+}
+
+
+.funcionalidades_article {
+    margin: 20% 0;
+    width: 90%;
+    display: flex;
+    align-items: center;
+
+    div {
+        width: 60%;
+
+        li {
+            font-size: xx-large;
+            list-style-type: none;
+            padding: 4%;
+            background-color: $rosa-paleta;
+            margin: 5% 0;
+            box-shadow: 0px 10px 0px 5px $azul-medio-paleta;
+            border-start-end-radius: 50px;
+            border-end-end-radius: 50px;
+
+            &:nth-child(1) {
+                width: 60%;
+            }
+
+            &:nth-child(2) {
+                width: 80%;
+            }
+        }
+
+    }
+
+    figure {
+        width: 40%;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container_features {
+        grid-template-columns: 1fr;
+    }
+
+    .albuns_article {
+        max-width: 100%;
+
+        .albuns_text {
+            margin-top: 10vw;
+            width: 60%;
+            height: auto;
+            /**mobile: auto*/
+            font-size: medium;
+            /*+1200: 55px, mobile: medium*/
+            margin-left: -100px;
+            padding-left: 0;
+        }
+    }
+
+    .circle-image {
+        margin-left: -10px;
+    }
+}
+
+@media (max-width: 1198px) {
+    .albuns_article .albuns_text {
+
+        height: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .albuns_article .albuns_text {
+        font-size: 60px;
+        /*+1200: 55px, mobile: medium*/
+    }
+}
