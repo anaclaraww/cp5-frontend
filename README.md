@@ -1,4 +1,10 @@
 # cp5-frontend
+Integrantes:
+- ANA CLARA MELO (559021) 
+- MARIANA DOURADO (550494)
+- GUSTAVO IKEDA (554718) 
+- HENRIQUE AZEVEDO (556707) 
+- YASMIN SOBRAL (558757)
 # Melodia - Landing Page
 
 **Melodia** é uma landing page que apresenta um aplicativo de música chamado *Melodia*. O objetivo do site é introduzir o aplicativo e incluir um player de músicas integrado para que os usuários possam ter uma prévia das funcionalidades do aplicativo.
@@ -56,9 +62,4 @@ O projeto está estruturado da seguinte forma:
 
 4. Abra o arquivo `index.html` no seu navegador de preferência para visualizar a página.
 
-Integrantes:
-- ANA CLARA MELO (559021) 
-- MARIANA DOURADO
-- GUSTAVO IKEDA (554718) 
-- HENRIQUE AZEVEDO (556707) 
-- YASMIN SOBRAL (558757)
+
